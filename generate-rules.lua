@@ -224,6 +224,13 @@ local allowed_syscalls = {
   'sysinfo',
   'ugetrlimit',
   'uname',
+
+  --- futex
+  'get_robust_list',
+  'set_robust_list',
+  'futex',
+  'futex_time64',
+  'futex_waitv',
 }
 
 local disallowed_syscalls = {
@@ -250,13 +257,6 @@ local disallowed_syscalls = {
   'lsetxattr',
   'removexattr',
   'setxattr',
-
-  --- futex
-  'get_robust_list',
-  'set_robust_list',
-  'futex',
-  'futex_time64',
-  'futex_waitv',
 
   -- inter process communication
   'ipc',
